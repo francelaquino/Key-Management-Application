@@ -1,0 +1,32 @@
+﻿1>------ Build started: Project: KeyIssuingAPI, Configuration: Debug Any CPU ------
+1>C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets(1635,5): warning MSB3270: There was a mismatch between the processor architecture of the project being built "MSIL" and the processor architecture of the reference "Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86", "x86". This mismatch may cause runtime failures. Please consider changing the targeted processor architecture of your project through the Configuration Manager so as to align the processor architectures between your project and references, or take a dependency on references with a processor architecture that matches the targeted processor architecture of your project.
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(57,30,57,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(114,30,114,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(173,30,173,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(237,30,237,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(301,30,301,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(349,30,349,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(413,30,413,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(478,30,478,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(544,30,544,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(583,30,583,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(639,30,639,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(685,30,685,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(991,30,991,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(1033,30,1033,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(1120,30,1120,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(1166,30,1166,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(1209,30,1209,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(1329,30,1329,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(1417,30,1417,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(1478,30,1478,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(1539,31,1539,33): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(1600,31,1600,33): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(1656,31,1656,33): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(1712,31,1712,33): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(1755,30,1755,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(1803,30,1803,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\DataController.cs(1852,30,1852,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\Controllers\LoginController.cs(76,30,76,32): warning CS0168: The variable 'ex' is declared but never used
+1>  KeyIssuingAPI -> D:\RCHSP\Team Foundation\Development\KeyIssuing\KeyIssuingSolution\KeyIssuingAPI\bin\KeyIssuingAPI.dll
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
