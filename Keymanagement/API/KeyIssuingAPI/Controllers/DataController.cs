@@ -1360,14 +1360,15 @@ namespace KeyIssuingAPI.Controllers
                 dbconn.openConnection();
 
 
-                string strSQL = @"SELECT * FROM (SELECT D.ID AS BUILDINGID,E.ID AS LEVELID,C.ID AS ROOMID,A.ISSUANCETYPE,CASE WHEN A.ISSUANCETYPE='Temporary' then TO_CHAR(RETURNDATE,'DD-Mon-YYYY') else '' end AS RETURNDATE,A.ID,DATEREQUESTED,B.ID AS KEYID,A.QUANTITY,EMPLOYEENO,EMPLOYEENAME,SECTION,
-                    EXTENSION,NOTES,B.KEYTYPE,C.ROOM,E.LEVELS,D.BUILDINGCODE,D.BUILDINGNAME,F.STATUS,A.STATUS AS STATUSID
-                    FROM REQUESTS A
-                    INNER JOIN KEYS B ON A.KEYID=B.ID
-                    LEFT JOIN ROOMS C ON C.ID=B.ROOM
-                    INNER JOIN BUILDINGS D ON D.ID=B.BUILDING 
-                    LEFT JOIN LEVELS E ON E.ID= B.LEVELS
-                    INNER JOIN TRANSTATUS F ON F.ID=A.STATUS) ";
+                    string strSQL = @"SELECT * FROM (SELECT D.ID AS BUILDINGID,E.ID AS LEVELID,C.ID AS ROOMID,A.ISSUANCETYPE,CASE WHEN A.ISSUANCETYPE='Temporary' then TO_CHAR(RETURNDATE,'DD-Mon-YYYY') else '' end AS RETURNDATE,A.ID,DATEREQUESTED,B.ID AS KEYID,A.QUANTITY,EMPLOYEENO,EMPLOYEENAME,SECTION,
+                        EXTENSION,NOTES,B.KEYTYPE,C.ROOM,E.LEVELS,D.BUILDINGCODE,D.BUILDINGNAME,F.STATUS,A.STATUS AS STATUSID,
+                        CASE WHEN NVL(B.KEYTYPE,'')='Master' THEN '' ELSE BUILDINGCODE||'-'|| C.ROOM END AS KEYCODE
+                        FROM REQUESTS A
+                        INNER JOIN KEYS B ON A.KEYID=B.ID
+                        LEFT JOIN ROOMS C ON C.ID=B.ROOM
+                        INNER JOIN BUILDINGS D ON D.ID=B.BUILDING 
+                        LEFT JOIN LEVELS E ON E.ID= B.LEVELS
+                        INNER JOIN TRANSTATUS F ON F.ID=A.STATUS) ";
 
                 string strWhere="";
 
@@ -1441,7 +1442,7 @@ namespace KeyIssuingAPI.Controllers
                              extension = dr["EXTENSION"].ToString(),
                              statusid = dr["STATUSID"].ToString(),
                              status = dr["STATUS"].ToString(),
-                             keycode = dr["BUILDINGCODE"].ToString() + "-" + dr["ROOM"].ToString(),
+                             code = dr["KEYCODE"].ToString() ,
                              notes = dr["NOTES"].ToString(),
                              keytype = dr["KEYTYPE"].ToString(),
                              issuancetype = dr["ISSUANCETYPE"].ToString(),
@@ -1482,7 +1483,7 @@ namespace KeyIssuingAPI.Controllers
 
                 string strSQL = @"SELECT * FROM (SELECT C.ID AS LEVELID, D.ID AS ROOMID,B.ID AS BUILDINGID,B.BUILDINGCODE,B.BUILDINGNAME,C.LEVELS,D.ROOM,A.QUANTITY,A.KEYTYPE,
                 (SELECT NVL(SUM(QUANTITY),0) FROM REQUESTS WHERE STATUS='I' AND KEYID=A.ID) AS ISSUEDQUANTITY,
-                CASE WHEN NVL(A.KEYTYPE,'')='Master' THEN '' ELSE BUILDINGCODE||'-'||D.ROOM END AS KEYID FROM KEYS A
+                CASE WHEN NVL(A.KEYTYPE,'')='Master' THEN '' ELSE BUILDINGCODE||'-'|| D.ROOM END AS KEYID FROM KEYS A
                 INNER JOIN BUILDINGS B ON B.ID=A.BUILDING
                 LEFT JOIN LEVELS C ON C.ID=A.LEVELS
                 LEFT JOIN ROOMS D ON D.ID=A.ROOM) ";
